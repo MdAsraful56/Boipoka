@@ -15,7 +15,7 @@ const EnglishBooks = () => {
             .then(data => setBooks(data));
     } ,[])
 
-    console.log(books)
+    // console.log(books);
 
     return (
         <div className="lg:px-24 px-2">

@@ -2,6 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './App.css'
 import Home from './components/Home/Home'
 import RootLayout from './components/RootLayout/RootLayout'
+import BooksDetailes from './components/BooksDetailes/BooksDetailes'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={ <RootLayout /> } >
         <Route index element={<Home />} />
-        
+        <Route path='/books/:id' loader={() => fetch('../../../public/EnglishBooks.json')} element={ <BooksDetailes /> } />
       </Route>
     )
   )
