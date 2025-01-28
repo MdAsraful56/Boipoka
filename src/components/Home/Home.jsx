@@ -1,11 +1,12 @@
-import { Outlet } from "react-router";
 import Banner from "../Banner/Banner";
+import EnglishBooks from "../EnglishBooks/EnglishBooks";
 
 const Home = () => {
     return (
         <div>
-            <Outlet />
             <Banner />
+
+            <EnglishBooks />
         </div>
     );
 };
