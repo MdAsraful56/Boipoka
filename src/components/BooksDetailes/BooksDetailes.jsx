@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
+import { saveReadBook, saveWishlistBook } from "../../LocalStroage/LocalStroage";
 
 
 const BooksDetailes = () => {
@@ -10,7 +12,16 @@ const BooksDetailes = () => {
 
     // console.log(book);
 
+    const handleReadNow = () => {
+        saveReadBook(book.bookId);
+        // console.log(book.bookId)
+        toast.success("Books Added to Readlist !!!");
+    }
 
+    const handleWishlist = () => {
+        saveWishlistBook(book.bookId);
+        toast.success('Books Added to Wishlist !!!');
+    }
 
     const { totalPages, rating, category, tags, publisher, yearOfPublishing, review, image, author, bookName } = book;
 
@@ -52,10 +63,11 @@ const BooksDetailes = () => {
                     </div>
                 </div>
                 <div className="">
-                    <button onClick={console.log('Read')} className="btn bg-blue-600 text-white mr-5">Read</button>
-                    <button onClick={console.log('Wishlist')} className="btn bg-[#49b9d5] text-white ">Wishlist</button>
+                    <button onClick={handleReadNow} className="btn bg-blue-600 text-white mr-5">Read</button>
+                    <button onClick={handleWishlist} className="btn bg-[#49b9d5] text-white ">Wishlist</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
