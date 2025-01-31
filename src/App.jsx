@@ -15,7 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/books/:id' loader={() => fetch('../../../public/EnglishBooks.json')} element={ <BooksDetailes /> } />
         <Route path='/listbooks' loader={() => fetch('../public/EnglishBooks.json')} element={<ListBook />} />
-        <Route path='/pagetoread' loader={()=> fetch('../public/EnglishBooks.json')} element={ <PageToRead /> } />
+        {/* <Route path='/pagetoread' loader={()=> fetch('../public/EnglishBooks.json')} element={ <PageToRead /> } /> */}
       </Route>
     )
   )

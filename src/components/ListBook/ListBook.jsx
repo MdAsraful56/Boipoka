@@ -32,7 +32,7 @@ const ListBook = () => {
                 </div>
             </div>
             <div className="p-20 text-center">
-                <span className="text-2xl text-center font-semibold">Hello</span>
+                <span className="text-2xl text-center font-semibold">Not Work This Mathod. So I Will Learn YouTube Free Video && Document </span>
             </div>
         </div>
     );
